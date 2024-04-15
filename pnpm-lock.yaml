@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@headlessui/react':
+    specifier: ^1.7.18
+    version: 1.7.18(react-dom@18.2.0)(react@18.2.0)
   axios:
     specifier: ^1.6.8
     version: 1.6.8
@@ -320,6 +323,19 @@ packages:
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
+
+  /@headlessui/react@1.7.18(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-4i5DOrzwN4qSgNsL4Si61VMkUcWbcSKueUV7sFhpHzQcSShdlHENE5+QBntMSRvHt8NyoFO2AGG8si9lq+w4zQ==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: ^16 || ^17 || ^18
+      react-dom: ^16 || ^17 || ^18
+    dependencies:
+      '@tanstack/react-virtual': 3.2.1(react-dom@18.2.0)(react@18.2.0)
+      client-only: 0.0.1
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
 
   /@humanwhocodes/config-array@0.11.14:
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
@@ -660,6 +676,21 @@ packages:
     dependencies:
       '@swc/counter': 0.1.3
     dev: true
+
+  /@tanstack/react-virtual@3.2.1(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-i9Nt0ssIh2bSjomJZlr6Iq5usT/9+ewo2/fKHRNk6kjVKS8jrhXbnO8NEawarCuBx/efv0xpoUUKKGxa0cQb4Q==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@tanstack/virtual-core': 3.2.1
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
+  /@tanstack/virtual-core@3.2.1:
+    resolution: {integrity: sha512-nO0d4vRzsmpBQCJYyClNHPPoUMI4nXNfrm6IcCRL33ncWMoNVpURh9YebEHPw8KrtsP2VSJIHE4gf4XFGk1OGg==}
+    dev: false
 
   /@types/estree@1.0.5:
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
@@ -1011,6 +1042,10 @@ packages:
     optionalDependencies:
       fsevents: 2.3.3
     dev: true
+
+  /client-only@0.0.1:
+    resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==}
+    dev: false
 
   /color-convert@2.0.1:
     resolution: {integrity: sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==}
