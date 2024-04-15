@@ -8,6 +8,8 @@ export default function Modal() {
     dialogModal,
     closeModal,
     recipeDetails: [detail],
+    addToFavorite,
+    favoriteExists,
   } = useAppStore();
   const hasDetail = useMemo(() => !!detail, [detail]);
 
@@ -28,16 +30,14 @@ export default function Modal() {
     return ingridients;
   };
 
+  const handleTitle = (id: RecipeDetail["idDrink"]) => {
+    return favoriteExists(id) ? "Eliminar de Favoritos" : "Agregar a Favoritos";
+  };
+
   return (
     <>
       <Transition appear show={dialogModal} as={Fragment}>
-        <Dialog
-          as="div"
-          className="relative z-10"
-          onClose={() => {
-            closeModal();
-          }}
-        >
+        <Dialog as="div" className="relative z-10" onClose={() => closeModal()}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -93,7 +93,7 @@ export default function Modal() {
                       <button
                         type="button"
                         className="w-full rounded bg-gray-600 p-3 font-bold uppercase text-white hover:bg-gray-500"
-                        onClick={() => {closeModal()}}
+                        onClick={() => closeModal()}
                       >
                         Cerrar
                       </button>
@@ -101,9 +101,12 @@ export default function Modal() {
                       <button
                         type="button"
                         className="w-full rounded bg-orange-600 p-3 font-bold uppercase text-white hover:bg-orange-500"
-                        // onClick={() => saveToFavorites}
+                        onClick={() => {
+                          addToFavorite(detail);
+                          closeModal();
+                        }}
                       >
-                        Agregar a Favoritos
+                        {handleTitle(detail.idDrink)}
                       </button>
                     </div>
                   </Dialog.Panel>
