@@ -6,3 +6,9 @@
 
 ### Instalación:
   npm install @headlessui/react  
+
+## Icons:
+  heroicons
+
+### Instalación :
+  npm i @heroicons/react

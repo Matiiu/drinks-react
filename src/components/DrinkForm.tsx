@@ -3,7 +3,7 @@ import { useAppStore } from "../stores/useAppStore";
 import { SearchFilter } from "../types";
 
 export default function DrinkForm() {
-  const { categories, searchRecipes } = useAppStore();
+  const { categories, searchRecipes, showNotification } = useAppStore();
   const [searchFilters, setSearchFilters] = useState<SearchFilter>({
     ingredient: "",
     category: "",
@@ -22,10 +22,11 @@ export default function DrinkForm() {
     e.preventDefault();
 
     // Validar si algún campo está vacío
-    const fieldEmpty = Object.values(searchFilters).some((value) => !value);
-
-    if (fieldEmpty) {
-      console.log("Todos los campos son obligatorios");
+    if (Object.values(searchFilters).some((value) => !value)) {
+      showNotification({
+        text: "Todos los campos son obligatorios",
+        isError: true,
+      });
       return;
     }
     searchRecipes(searchFilters);
