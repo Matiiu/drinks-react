@@ -1,9 +1,10 @@
 import { useEffect, useMemo } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 import { useAppStore } from "../stores/useAppStore";
 
 import DrinkForm from "./DrinkForm";
+import LinksDisplay from './LinksDisplay';
 export default function Header() {
   const { pathname } = useLocation();
   const isHome = useMemo(() => pathname === "/", [pathname]);
@@ -23,26 +24,8 @@ export default function Header() {
           </figure>
 
           <nav className="flex gap-4">
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-gray-300 uppercase font-bold"
-                  : "text-white uppercase font-bold"
-              }
-            >
-              Inicio
-            </NavLink>
-            <NavLink
-              to="/favoritos"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-gray-300 uppercase font-bold"
-                  : "text-white uppercase font-bold"
-              }
-            >
-              Favoritos
-            </NavLink>
+            <LinksDisplay link="/" name="Inicio" />
+            <LinksDisplay link="/favoritos" name="Favoritos" />
           </nav>
         </div>
         {isHome && <DrinkForm />}
