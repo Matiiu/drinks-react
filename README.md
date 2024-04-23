@@ -1,14 +1,19 @@
 ## API:
-  https://www.thecocktaildb.com/api.php
+
+https://www.thecocktaildb.com/api.php
 
 ## Modales:
-  https://headlessui.com/
+
+https://headlessui.com/
 
 ### Instalación:
-  npm install @headlessui/react  
+
+npm install @headlessui/react
 
 ## Icons:
-  heroicons
+
+heroicons
 
 ### Instalación :
-  npm i @heroicons/react
+
+npm i @heroicons/react

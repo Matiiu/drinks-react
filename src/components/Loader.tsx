@@ -1,9 +1,9 @@
-import "../Loader.css";
+import '../Loader.css';
 
 export default function Loader() {
-  return (
-    <div className="loader-bg">
-      <span className="loader"></span>
-    </div>
-  );
+	return (
+		<div className='loader-bg'>
+			<span className='loader'></span>
+		</div>
+	);
 }
