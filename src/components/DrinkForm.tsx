@@ -9,9 +9,7 @@ export default function DrinkForm() {
 		category: '',
 	});
 
-	type HandleChange = ChangeEvent<HTMLInputElement | HTMLSelectElement>;
-
-	const handleChange = (e: HandleChange) => {
+	const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
 		setSearchFilters({
 			...searchFilters,
 			[e.target.name]: e.target.value,
