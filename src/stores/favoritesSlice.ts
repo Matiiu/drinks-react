@@ -29,7 +29,7 @@ export const createFavoritesSlice: CreateFavoritesSliceType = (set, get, api) =>
 			// Si ya existe lo eliminamos
 			set((state) => ({
 				favorites: state.favorites.filter(
-					({idDrink}) => idDrink !== recipe.idDrink,
+					({idDrink}) => idDrink !== recipe.idDrink
 				),
 			}));
 

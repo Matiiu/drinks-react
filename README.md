@@ -14,6 +14,6 @@ npm install @headlessui/react
 
 heroicons
 
-### Instalación :
+### Instalación:
 
 npm i @heroicons/react

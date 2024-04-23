@@ -11,7 +11,7 @@ type Notification = {
 export type NotificationSliceType = {
 	notification: Notification;
 	showNotification: (
-		payload: Pick<Notification, 'text' | 'isError' | 'timeOut'>,
+		payload: Pick<Notification, 'text' | 'isError' | 'timeOut'>
 	) => void;
 	closeNotificationModal: ({closeManual}: {closeManual?: boolean}) => void;
 };
@@ -60,7 +60,7 @@ export const createNotificationSlice: createNotificationSliceType = (set, get) =
 						...initialNotification,
 					},
 				}),
-			get().notification.timeOut,
+			get().notification.timeOut
 		);
 	},
 });

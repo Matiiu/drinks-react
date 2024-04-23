@@ -34,7 +34,7 @@ export const createRecipeSlice: StateCreator<RecipeSliceType> = (set, get) => ({
 		if (categories.drinks.length > 0) {
 			// Sort asc
 			const categoriesAsc = categories.drinks.sort((a, b) =>
-				a.strCategory.localeCompare(b.strCategory),
+				a.strCategory.localeCompare(b.strCategory)
 			);
 			categories.drinks = [...categoriesAsc];
 		}

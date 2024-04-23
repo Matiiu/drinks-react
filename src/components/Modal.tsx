@@ -26,7 +26,7 @@ export default function Modal() {
 						className='text-lg font-normal'
 					>
 						{ingredient} - {measure}
-					</li>,
+					</li>
 				);
 			}
 		}

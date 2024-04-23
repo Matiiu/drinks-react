@@ -12,5 +12,5 @@ export const useAppStore = create<AppStoreType>()(
 		...createRecipeSlice(...a),
 		...createFavoritesSlice(...a),
 		...createNotificationSlice(...a),
-	})),
+	}))
 );
