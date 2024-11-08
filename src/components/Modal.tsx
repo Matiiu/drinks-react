@@ -98,9 +98,7 @@ export default function Modal() {
 										>
 											Instrucciones
 										</Dialog.Title>
-										<p className='text-lg'>
-											{detail.strInstructions}
-										</p>
+										<p className='text-lg'>{detail.strInstructions}</p>
 
 										<div className='mt-5 flex justify-between gap-4'>
 											<button

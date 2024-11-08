@@ -28,9 +28,7 @@ export const createFavoritesSlice: CreateFavoritesSliceType = (set, get, api) =>
 		if (get().favoriteExists(recipe.idDrink)) {
 			// Si ya existe lo eliminamos
 			set((state) => ({
-				favorites: state.favorites.filter(
-					({idDrink}) => idDrink !== recipe.idDrink
-				),
+				favorites: state.favorites.filter(({idDrink}) => idDrink !== recipe.idDrink),
 			}));
 
 			createNotificationSlice(set, get, api).showNotification({

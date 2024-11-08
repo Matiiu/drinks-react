@@ -21,9 +21,7 @@ export default function Favorites() {
 					))}
 				</div>
 			) : (
-				<p className='my-10 text-center text-2xl'>
-					Los favoritos se mostrarán aquí
-				</p>
+				<p className='my-10 text-center text-2xl'>Los favoritos se mostrarán aquí</p>
 			)}
 		</>
 	);
